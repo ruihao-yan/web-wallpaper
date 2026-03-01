@@ -1,0 +1,14 @@
+{
+  "name": "sakura-wallpaper-demo",
+  "version": "1.0.0",
+  "description": "Sakura壁纸 - 高清壁纸展示与下载 Demo",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npm run dev",
+    "help": "echo '可用命令: npm run dev / npm start - 启动项目'"
+  },
+  "keywords": [],
+  "author": "Google Deepmind Team & USER",
+  "license": "ISC"
+}

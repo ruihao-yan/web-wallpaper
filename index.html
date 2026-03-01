@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura壁纸 - 高清壁纸下载</title>
+  <meta name="description" content="Sakura壁纸 - 精选高清电脑壁纸、手机壁纸免费下载，4K / 8K 超清壁纸资源站" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" id="logo">
+        <span class="logo-text">Sakura壁纸</span>
+      </a>
+      <nav class="nav" id="main-nav">
+        <a href="#" class="nav-link active" data-category="all">全部壁纸</a>
+        <a href="#" class="nav-link" data-category="pc">电脑壁纸</a>
+        <a href="#" class="nav-link" data-category="mobile">手机壁纸</a>
+        <a href="#" class="nav-link" data-category="anime">动漫壁纸</a>
+        <a href="#" class="nav-link" data-category="scenery">风景壁纸</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">发现你的专属壁纸</h1>
+      <p class="hero-subtitle">精选高清壁纸 · 免费下载 · 每日更新</p>
+      <div class="hero-search" id="hero-search">
+        <input type="text" class="search-input" id="search-input" placeholder="搜索壁纸… 风景、动漫、城市…" />
+        <button class="search-btn" id="search-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Hero indicators -->
+    <div class="hero-indicators" id="hero-indicators"></div>
+  </section>
+
+  <!-- ===== Filter Bar ===== -->
+  <section class="filter-bar" id="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-group">
+        <span class="filter-label">分类</span>
+        <button class="filter-chip active" data-filter="all">全部</button>
+        <button class="filter-chip" data-filter="scenery">风景</button>
+        <button class="filter-chip" data-filter="anime">动漫</button>
+        <button class="filter-chip" data-filter="city">城市</button>
+        <button class="filter-chip" data-filter="illustration">插画</button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">排序</span>
+        <button class="filter-chip active" data-sort="default">默认</button>
+        <button class="filter-chip" data-sort="name">名称</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery Grid ===== -->
+  <main class="gallery-section" id="gallery-section">
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Cards rendered by JS -->
+    </div>
+  </main>
+
+  <!-- ===== Lightbox / Preview Modal ===== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close" aria-label="关闭">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="上一张">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-img-wrapper">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      </div>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="下一张">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox-info" id="lightbox-info">
+        <span class="lightbox-title" id="lightbox-title"></span>
+        <a class="lightbox-download" id="lightbox-download" href="#" download aria-label="下载壁纸">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>下载原图</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <p class="footer-brand">🎨 Sakura壁纸 &copy; 2026</p>
+      <p class="footer-links">
+        <a href="#">用户协议</a>
+        <span class="footer-sep">·</span>
+        <a href="#">隐私政策</a>
+        <span class="footer-sep">·</span>
+        <a href="#">关于我们</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="返回顶部">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
